@@ -1,0 +1,14 @@
+D:\Sachin\Code\Virtusa\PreProcessorAPI\PreProcessorAPI\obj\Debug\netcoreapp2.1\PreProcessorAPI.csproj.CoreCompileInputs.cache
+D:\Sachin\Code\Virtusa\PreProcessorAPI\PreProcessorAPI\obj\Debug\netcoreapp2.1\PreProcessorAPI.AssemblyInfoInputs.cache
+D:\Sachin\Code\Virtusa\PreProcessorAPI\PreProcessorAPI\obj\Debug\netcoreapp2.1\PreProcessorAPI.AssemblyInfo.cs
+D:\Sachin\Code\Virtusa\PreProcessorAPI\PreProcessorAPI\bin\Debug\netcoreapp2.1\PreProcessorAPI.deps.json
+D:\Sachin\Code\Virtusa\PreProcessorAPI\PreProcessorAPI\bin\Debug\netcoreapp2.1\PreProcessorAPI.runtimeconfig.json
+D:\Sachin\Code\Virtusa\PreProcessorAPI\PreProcessorAPI\bin\Debug\netcoreapp2.1\PreProcessorAPI.runtimeconfig.dev.json
+D:\Sachin\Code\Virtusa\PreProcessorAPI\PreProcessorAPI\bin\Debug\netcoreapp2.1\PreProcessorAPI.dll
+D:\Sachin\Code\Virtusa\PreProcessorAPI\PreProcessorAPI\obj\Debug\netcoreapp2.1\PreProcessorAPI.csprojAssemblyReference.cache
+D:\Sachin\Code\Virtusa\PreProcessorAPI\PreProcessorAPI\obj\Debug\netcoreapp2.1\PreProcessorAPI.RazorAssemblyInfo.cache
+D:\Sachin\Code\Virtusa\PreProcessorAPI\PreProcessorAPI\obj\Debug\netcoreapp2.1\PreProcessorAPI.RazorAssemblyInfo.cs
+D:\Sachin\Code\Virtusa\PreProcessorAPI\PreProcessorAPI\obj\Debug\netcoreapp2.1\PreProcessorAPI.RazorTargetAssemblyInfo.cache
+D:\Sachin\Code\Virtusa\PreProcessorAPI\PreProcessorAPI\bin\Debug\netcoreapp2.1\PreProcessorAPI.pdb
+D:\Sachin\Code\Virtusa\PreProcessorAPI\PreProcessorAPI\obj\Debug\netcoreapp2.1\PreProcessorAPI.dll
+D:\Sachin\Code\Virtusa\PreProcessorAPI\PreProcessorAPI\obj\Debug\netcoreapp2.1\PreProcessorAPI.pdb
