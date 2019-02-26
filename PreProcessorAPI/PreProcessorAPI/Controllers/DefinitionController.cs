@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using PreProcessorAPI.DB;
+using PreProcessorAPI.Models;
+using PreProcessorAPI.Services;
 
 namespace PreProcessorAPI.Controllers
 {
@@ -13,16 +15,30 @@ namespace PreProcessorAPI.Controllers
     public class DefinitionController : ControllerBase
     {
         private readonly IDefinitionService DefinitionService;
+      
 
         public DefinitionController(IDefinitionService definitionService)
         {
-            this.DefinitionService = definitionService;
+            DefinitionService = definitionService;
+           
+        }
+        [HttpGet]
+        public ActionResult GetAll()
+        {
+            return Ok(DefinitionService.GetAll());
         }
 
-        [HttpGet]
-        public async Task<IActionResult> Get()
+        [HttpPost]
+        public ActionResult Add(Definition definition) 
         {
-            return new ObjectResult(await DefinitionService.GetAll());
+            DefinitionService.Add(definition);
+            return Created(string.Empty, definition);
+        }
+
+        [HttpDelete]
+        public bool Delete(string Id)
+        {
+            return DefinitionService.Delete(Id);
         }
     }
 }

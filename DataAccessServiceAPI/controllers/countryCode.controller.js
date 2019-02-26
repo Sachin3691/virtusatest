@@ -9,3 +9,12 @@ exports.getAll = async function(req, res, next) {
         data: countryCode
     });
 }
+LogLog
+exports.insert = async function(req, res, next) {
+    debugger;
+    await CountryCodeService.insert();
+    return res.json({
+        data: 'OK'
+    });
+}
+

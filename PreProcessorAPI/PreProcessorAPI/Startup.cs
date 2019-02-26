@@ -9,15 +9,17 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using PreProcessorAPI.DB;
+using PreProcessorAPI.Services;
 
 namespace PreProcessorAPI
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration, ILoggerFactory loggerFactory)
         {
             Configuration = configuration;
+            loggerFactory.AddConsole(Configuration.GetSection("Logging"));
+            loggerFactory.AddDebug();
         }
 
         public IConfiguration Configuration { get; }
@@ -25,14 +27,10 @@ namespace PreProcessorAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddCors();
 
-            services.Configure<Settings>(
-                options =>
-                {
-                    options.ConnectionString = Configuration.GetSection("MongoDb:ConnectionString").Value;
-                    options.Database = Configuration.GetSection("MongoDb:Database").Value;
-                });
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddScoped<IDataService, DataService>();
 
             services.AddTransient<IDefinitionService, DefinitionService>();
         }

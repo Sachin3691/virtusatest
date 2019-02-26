@@ -9,7 +9,7 @@ exports.getAll = async function() {
    return data;
 }
 
-insert = async function() {
+exports.insert = async function() {
     var India = new Country({
         country: "India",
         mobileNumber: 8050033795,

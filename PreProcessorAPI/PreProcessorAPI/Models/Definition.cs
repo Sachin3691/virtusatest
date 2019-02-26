@@ -1,18 +1,17 @@
-﻿using MongoDB.Bson;
-using MongoDB.Bson.Serialization.Attributes;
+﻿using Newtonsoft.Json;
 
 namespace PreProcessorAPI.Models
 {
+    [JsonObject]
     public class Definition
     {
-        [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
+        [JsonProperty]
         public string Id { get; set; }
 
-        [BsonElement("TargetVal")]
+        [JsonProperty]
         public string Target { get; set; }
 
-        [BsonElement("ReplaceVal")]
-        public decimal Replace { get; set; }
+        [JsonProperty]
+        public string Replace { get; set; }
     }
 }
