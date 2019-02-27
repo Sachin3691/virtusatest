@@ -2,12 +2,8 @@ var mongoose = require('mongoose');
 //var mongoosePaginate = require('mongoose-paginate');
 
 var countryCodeSchema = new mongoose.Schema({
-    countryCode : {
-        type: Number,
-        required: true
-    },
     mobileNumber: {
-        type: Number,
+        type: String,
         required: true,
     },
     country: {

@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "2fba7573-a5c0-4645-ae6f-a757cb908779",
+		"name": "Virtusa",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAllData",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:32768/api/definition",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "32768",
+					"path": [
+						"api",
+						"definition"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddDatat",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"2\",\n\t\"target\": \"US\",\n\t\"replace\": \"+1\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:32768/api/definition",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "32768",
+					"path": [
+						"api",
+						"definition"
+					],
+					"query": [
+						{
+							"key": "sdfsdf",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteData",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:32768/api/definition?Id=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "32768",
+					"path": [
+						"api",
+						"definition"
+					],
+					"query": [
+						{
+							"key": "Id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DefnAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/processor?inputData=IND8050033795|IND8050033796",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"processor"
+					],
+					"query": [
+						{
+							"key": "inputData",
+							"value": "IND8050033795|IND8050033796"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -9,7 +9,7 @@ exports.getAll = async function(req, res, next) {
         data: countryCode
     });
 }
-LogLog
+
 exports.insert = async function(req, res, next) {
     debugger;
     await CountryCodeService.insert();
@@ -18,3 +18,11 @@ exports.insert = async function(req, res, next) {
     });
 }
 
+exports.getByPhone = async function(req, res, next) {
+    debugger;
+    console.log("Request: "+ req.body);
+    var a = await CountryCodeService.getCountry(req.body)
+    return res.json({
+        data: a
+    })
+}

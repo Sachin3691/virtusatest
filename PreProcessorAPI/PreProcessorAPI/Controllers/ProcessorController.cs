@@ -45,9 +45,9 @@ namespace PreProcessorAPI.Controllers
                 }
             }
 
-            await DataService.GetData(formatDataList);
+            var result = await DataService.GetData(formatDataList);
 
-            return Ok();
+            return Ok(result);
         }
     }
 }

@@ -31,21 +31,35 @@ app.use(function(req, res, next) {
   
     // render the error page
     res.status(err.status || 500);
-    res.render('error');
+    res.send(err.message);
   });
 
   var bluebird = require('bluebird')
 
+
   var mongoose = require('mongoose')
   mongoose.Promise = bluebird
- mongoose.connect('mongodb://127.0.0.1:27017/db', { useNewUrlParser: true })
-  .then(()=> { console.log(`Succesfully Connected to the
-  Mongodb Database  at URL : mongodb://127.0.0.1:27017/db`)})
-  .catch((err)=> { 
-      console.log(`Error Connecting to the Mongodb
-  Database at URL : mongodb://127.0.0.1:27017/db`);
-  console.error(err)})
+
+  const connectWithRetry = () => {
+    console.log('MongoDB connection with retry')
+    mongoose.connect('mongodb://mongo:27017/db', { useNewUrlParser: true })
+  }
   
+  mongoose.connection.on('error', err => {
+    console.log(`MongoDB connection error: ${err}`)
+    setTimeout(connectWithRetry, 5000)
+    // process.exit(-1)
+  })
+
+  mongoose.connection.on('connected', () => {
+    console.log('MongoDB is connected')
+  })
+
+  const connect = () => {
+    connectWithRetry()
+  }
+
+  connect();
 
   app.listen(3000, ()=> {
       console.log('Server started at port 3000');

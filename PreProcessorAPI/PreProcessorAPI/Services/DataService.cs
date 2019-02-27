@@ -1,9 +1,12 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 using Polly;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace PreProcessorAPI.Services
@@ -20,9 +23,9 @@ namespace PreProcessorAPI.Services
             Log = _loggerFactory.CreateLogger("DataService");
         }
 
-        public async Task GetData(List<string> phoneNumber)
+        public async Task<string> GetData(List<string> phoneNumber)
         {
-            var url = new Uri("http://localhost:3000/all");
+            var url = new Uri("http://localhost:3000/getByPhone");
 
             var res = await Policy
                   .HandleResult<HttpResponseMessage>(message => !message.IsSuccessStatusCode)
@@ -30,7 +33,7 @@ namespace PreProcessorAPI.Services
                       {
                       Log.LogInformation($"Failed to connect to DataService. Retry after {timespan} ");
                   })
-                  .ExecuteAsync(() => httpClient.GetAsync(url));
+                  .ExecuteAsync(() => httpClient.PostAsync(url, new StringContent(JsonConvert.SerializeObject(phoneNumber), Encoding.UTF8, "application/json")));
 
             if (res.IsSuccessStatusCode)
             {
@@ -40,11 +43,14 @@ namespace PreProcessorAPI.Services
             {
                 Log.LogError($"Received invalid StatusCode, {res.StatusCode} ");
             }
+
+            var contents = res.Content.ReadAsStringAsync().Result;
+            return contents;
         }
     }
 
     public interface IDataService
     {
-        Task GetData(List<string> phoneNumber);
+        Task<string> GetData(List<string> phoneNumber);
     }
 }

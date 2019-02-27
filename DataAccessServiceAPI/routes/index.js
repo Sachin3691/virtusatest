@@ -10,5 +10,6 @@ router.get('/', function(req, res, next) {
 
 router.get('/all', CountryCodeController.getAll);
 router.get('/insert', CountryCodeController.insert);
+router.post('/getByPhone', CountryCodeController.getByPhone);
 
 module.exports = router;

@@ -12,3 +12,17 @@ D:\Sachin\Code\Virtusa\PreProcessorAPI\PreProcessorAPI\obj\Debug\netcoreapp2.1\P
 D:\Sachin\Code\Virtusa\PreProcessorAPI\PreProcessorAPI\bin\Debug\netcoreapp2.1\PreProcessorAPI.pdb
 D:\Sachin\Code\Virtusa\PreProcessorAPI\PreProcessorAPI\obj\Debug\netcoreapp2.1\PreProcessorAPI.dll
 D:\Sachin\Code\Virtusa\PreProcessorAPI\PreProcessorAPI\obj\Debug\netcoreapp2.1\PreProcessorAPI.pdb
+C:\CodeProjects\Virtusa\virtusatest\PreProcessorAPI\PreProcessorAPI\bin\Debug\netcoreapp2.1\PreProcessorAPI.deps.json
+C:\CodeProjects\Virtusa\virtusatest\PreProcessorAPI\PreProcessorAPI\bin\Debug\netcoreapp2.1\PreProcessorAPI.runtimeconfig.json
+C:\CodeProjects\Virtusa\virtusatest\PreProcessorAPI\PreProcessorAPI\bin\Debug\netcoreapp2.1\PreProcessorAPI.runtimeconfig.dev.json
+C:\CodeProjects\Virtusa\virtusatest\PreProcessorAPI\PreProcessorAPI\bin\Debug\netcoreapp2.1\PreProcessorAPI.dll
+C:\CodeProjects\Virtusa\virtusatest\PreProcessorAPI\PreProcessorAPI\bin\Debug\netcoreapp2.1\PreProcessorAPI.pdb
+C:\CodeProjects\Virtusa\virtusatest\PreProcessorAPI\PreProcessorAPI\obj\Debug\netcoreapp2.1\PreProcessorAPI.csprojAssemblyReference.cache
+C:\CodeProjects\Virtusa\virtusatest\PreProcessorAPI\PreProcessorAPI\obj\Debug\netcoreapp2.1\PreProcessorAPI.csproj.CoreCompileInputs.cache
+C:\CodeProjects\Virtusa\virtusatest\PreProcessorAPI\PreProcessorAPI\obj\Debug\netcoreapp2.1\PreProcessorAPI.RazorAssemblyInfo.cache
+C:\CodeProjects\Virtusa\virtusatest\PreProcessorAPI\PreProcessorAPI\obj\Debug\netcoreapp2.1\PreProcessorAPI.RazorAssemblyInfo.cs
+C:\CodeProjects\Virtusa\virtusatest\PreProcessorAPI\PreProcessorAPI\obj\Debug\netcoreapp2.1\PreProcessorAPI.AssemblyInfoInputs.cache
+C:\CodeProjects\Virtusa\virtusatest\PreProcessorAPI\PreProcessorAPI\obj\Debug\netcoreapp2.1\PreProcessorAPI.AssemblyInfo.cs
+C:\CodeProjects\Virtusa\virtusatest\PreProcessorAPI\PreProcessorAPI\obj\Debug\netcoreapp2.1\PreProcessorAPI.RazorTargetAssemblyInfo.cache
+C:\CodeProjects\Virtusa\virtusatest\PreProcessorAPI\PreProcessorAPI\obj\Debug\netcoreapp2.1\PreProcessorAPI.dll
+C:\CodeProjects\Virtusa\virtusatest\PreProcessorAPI\PreProcessorAPI\obj\Debug\netcoreapp2.1\PreProcessorAPI.pdb
